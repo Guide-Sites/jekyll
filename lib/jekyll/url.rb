@@ -158,6 +158,7 @@ module Jekyll
     #
     # Returns the unescaped path.
     def self.unescape_path(path)
+      Jekyll.logger.debug "URL:", "unescape_path(#{path})"
       path = path.encode("utf-8")
       return path unless path.include?("%")
 
